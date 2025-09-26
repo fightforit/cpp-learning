@@ -1,0 +1,15 @@
+# Use C++23 everywhere (host & target)
+build --cxxopt=-std=c++23
+build --host_cxxopt=-std=c++23
+
+# Prefer Clang 20 (adjust paths for your OS)
+build --action_env=CC=clang-20
+build --action_env=CXX=clang++-20
+build --repo_env=CC=clang-20
+build --repo_env=CXX=clang++-20
+
+# (Optional) libc++ instead of libstdc++:
+# build --cxxopt=-stdlib=libc++
+# build --linkopt=-stdlib=libc++
+# On Linux you may also need:
+# build --linkopt=-lc++abi

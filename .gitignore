@@ -1,0 +1,32 @@
+# ===== Bazel (always ignore) =====
+bazel-*/                
+bazel-*                 
+
+# ===== Tooling / language server =====
+compile_commands.json   
+.cache/                 
+
+# ===== Editors / IDEs =====
+# VS Code — choose ONE of these approaches:
+
+# (A) Ignore everything (each dev configures locally)
+.vscode/
+
+# (B) Share a few project-wide settings (uncomment these lines + comment the one above)
+# .vscode/*
+# !.vscode/settings.json
+# !.vscode/extensions.json
+# !.vscode/tasks.json
+
+# JetBrains (if anyone tries it)
+.idea/
+*.iml
+
+# ===== OS / misc =====
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.swo
+*.tmp
+*.lock
