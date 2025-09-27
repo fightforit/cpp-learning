@@ -4,6 +4,7 @@ cc_library(
     name = "hdrs",
     hdrs = glob(["include/*.hpp"]),
     includes = ["include"],      
+    copts = ["-std=c++23"],
     visibility = ["//visibility:public"],
 )
 
@@ -11,4 +12,5 @@ cc_binary(
     name = "demo",
     srcs = ["src/main.cpp"],
     deps = [":hdrs"],
+    copts = ["-std=c++23"],
 )
